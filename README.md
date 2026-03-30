@@ -1,14 +1,29 @@
 # Student Expense Tracker
 
-Student Expense Tracker is a full-stack web application built with Spring Boot, MySQL, HTML, CSS, and vanilla JavaScript. It helps students record expenses, monitor spending patterns, manage a monthly budget, and visualize category-wise trends with charts. The project now includes session-based login and registration so each user sees only their own data.
+Student Expense Tracker is a full-stack web application built with Spring Boot, MySQL, HTML, CSS, and vanilla JavaScript. It helps students record expenses, monitor spending patterns, manage a monthly budget, and visualize category-wise trends with charts. The project includes session-based login and registration so each user sees only their own data.
+
+## GitHub Pages
+
+This repository now includes a GitHub Actions workflow that deploys a static project showcase to GitHub Pages.
+
+- Repository: [mahendra0929/student-expense-tracker](https://github.com/mahendra0929/student-expense-tracker)
+- Pages URL: `https://mahendra0929.github.io/student-expense-tracker/`
+- Pages source: `docs/`
+
+Note: GitHub Pages can host the static showcase site, but the full Spring Boot backend and MySQL database must run locally or on a separate server.
 
 ## Folder Structure
 
 ```text
 student-expense-tracker/
+├── .github/workflows/deploy-pages.yml
 ├── database/
 │   ├── sample-data.sql
 │   └── schema.sql
+├── docs/
+│   ├── assets/
+│   ├── .nojekyll
+│   └── index.html
 ├── postman/
 │   └── student-expense-tracker.postman_collection.json
 ├── src/
@@ -29,7 +44,9 @@ student-expense-tracker/
 │               ├── js/
 │               ├── add-expense.html
 │               ├── edit-expense.html
-│               └── index.html
+│               ├── index.html
+│               ├── login.html
+│               └── register.html
 └── pom.xml
 ```
 
@@ -40,7 +57,7 @@ student-expense-tracker/
 - Track total, daily, and monthly spending
 - View category-wise and month-wise charts using Chart.js
 - Set a monthly budget and show alerts when spending exceeds it
-- Search/filter expenses on the dashboard
+- Search and filter expenses on the dashboard
 - Export expenses to CSV
 - Toggle between light and dark mode
 - Register, login, logout, and session-based access control
@@ -72,7 +89,7 @@ student-expense-tracker/
 
 ## MySQL Schema
 
-Use the SQL scripts from [schema.sql](/Users/charansagala/Documents/mahendra/database/schema.sql) and [sample-data.sql](/Users/charansagala/Documents/mahendra/database/sample-data.sql).
+Use the SQL scripts from [`database/schema.sql`](database/schema.sql) and [`database/sample-data.sql`](database/sample-data.sql).
 
 ### Tables
 
@@ -98,17 +115,17 @@ Use the SQL scripts from [schema.sql](/Users/charansagala/Documents/mahendra/dat
 
 1. Install Java 17+, Maven, and MySQL 8+.
 2. Create or verify a MySQL user and password.
-3. Update the database credentials in [application.properties](/Users/charansagala/Documents/mahendra/src/main/resources/application.properties).
+3. Update the database credentials in [`src/main/resources/application.properties`](src/main/resources/application.properties).
 4. Run the schema script:
 
 ```sql
-SOURCE /Users/charansagala/Documents/mahendra/database/schema.sql;
+SOURCE /absolute/path/to/student-expense-tracker/database/schema.sql;
 ```
 
 5. Optionally insert sample records:
 
 ```sql
-SOURCE /Users/charansagala/Documents/mahendra/database/sample-data.sql;
+SOURCE /absolute/path/to/student-expense-tracker/database/sample-data.sql;
 ```
 
 6. Start the Spring Boot app:
@@ -120,10 +137,10 @@ mvn spring-boot:run
 7. Open the app in your browser:
 
 ```text
-http://localhost:8080
+http://localhost:8080/login.html
 ```
 
-8. Test APIs with the Postman collection at [student-expense-tracker.postman_collection.json](/Users/charansagala/Documents/mahendra/postman/student-expense-tracker.postman_collection.json).
+8. Test APIs with the Postman collection at [`postman/student-expense-tracker.postman_collection.json`](postman/student-expense-tracker.postman_collection.json).
 
 ## Authentication Flow
 
