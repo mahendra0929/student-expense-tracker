@@ -2,28 +2,13 @@
 
 Student Expense Tracker is a full-stack web application built with Spring Boot, MySQL, HTML, CSS, and vanilla JavaScript. It helps students record expenses, monitor spending patterns, manage a monthly budget, and visualize category-wise trends with charts. The project includes session-based login and registration so each user sees only their own data.
 
-## GitHub Pages
-
-This repository now includes a GitHub Actions workflow that deploys a static project showcase to GitHub Pages.
-
-- Repository: [mahendra0929/student-expense-tracker](https://github.com/mahendra0929/student-expense-tracker)
-- Pages URL: `https://mahendra0929.github.io/student-expense-tracker/`
-- Pages source: `docs/`
-
-Note: GitHub Pages can host the static showcase site, but the full Spring Boot backend and MySQL database must run locally or on a separate server.
-
 ## Folder Structure
 
 ```text
 student-expense-tracker/
-├── .github/workflows/deploy-pages.yml
 ├── database/
 │   ├── sample-data.sql
 │   └── schema.sql
-├── docs/
-│   ├── assets/
-│   ├── .nojekyll
-│   └── index.html
 ├── postman/
 │   └── student-expense-tracker.postman_collection.json
 ├── src/
