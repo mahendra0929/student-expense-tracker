@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | Student Expense Tracker</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body data-page="register">
+<header class="topbar">
+    <div>
+        <p class="eyebrow">Project Showcase</p>
+        <h1>Student Expense Tracker</h1>
+    </div>
+    <div class="topbar-actions">
+        <button id="themeToggle" class="secondary-btn" type="button">Toggle Dark Mode</button>
+    </div>
+</header>
+
+<main class="container auth-shell auth-layout">
+    <section class="showcase-panel">
+        <div class="showcase-avatar"><img src="/images/mahendra-profile.png" alt="G Mahendra"></div>
+        <p class="showcase-tag">Presented By</p>
+        <h2 class="showcase-name">G Mahendra</h2>
+        <p class="showcase-college">K.S.R.M Engineering College</p>
+        <p class="showcase-project">Student Expense Tracker</p>
+        <p class="showcase-copy">Create your account and explore a clean student-friendly system for tracking expenses and budget progress.</p>
+        <div class="showcase-actions">
+            <a class="secondary-btn" href="/login.html">Already Registered</a>
+        </div>
+    </section>
+
+    <section class="card auth-card">
+        <h2>Start tracking smarter</h2>
+        <p class="auth-copy">Create a personal account to keep your expenses and budget private.</p>
+
+        <form id="registerForm" class="stack-form">
+            <label>
+                Name
+                <input type="text" id="name" maxlength="100" placeholder="Enter your name" required>
+            </label>
+            <label>
+                Email
+                <input type="email" id="email" placeholder="Enter your email" required>
+            </label>
+            <label>
+                Password
+                <input type="password" id="password" minlength="6" placeholder="Create a password" required>
+            </label>
+            <button class="primary-btn" type="submit">Register</button>
+        </form>
+
+        <div id="formMessage" class="form-message"></div>
+        <p class="inline-note">Already have an account? <a class="text-link inline-link" href="/login.html">Login here</a></p>
+    </section>
+</main>
+
+<script src="/js/common.js"></script>
+<script src="/js/register.js"></script>
+</body>
+</html>

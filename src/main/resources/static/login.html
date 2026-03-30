@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Student Expense Tracker</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body data-page="login">
+<header class="topbar">
+    <div>
+        <p class="eyebrow">Project Showcase</p>
+        <h1>Student Expense Tracker</h1>
+    </div>
+    <div class="topbar-actions">
+        <button id="contactToggle" class="secondary-btn contact-trigger" type="button">Contact Us</button>
+        <button id="themeToggle" class="secondary-btn" type="button">Toggle Dark Mode</button>
+    </div>
+</header>
+
+<main class="container auth-shell auth-layout">
+    <section class="showcase-panel">
+        <div class="showcase-presenter">
+            <div class="showcase-avatar"><img src="/images/mahendra-profile.png" alt="G Mahendra"></div>
+            <div class="showcase-presenter-copy">
+                <p class="showcase-tag">Presented By</p>
+                <h2 class="showcase-name">G Mahendra</h2>
+                <p class="showcase-college">K.S.R.M Engineering College</p>
+            </div>
+        </div>
+        <p class="showcase-project">Student Expense Tracker</p>
+        <p class="showcase-copy">A simple and practical student finance app for tracking daily expenses, category totals, and monthly budgets.</p>
+        <div class="showcase-actions">
+            <a class="primary-btn" href="/register.html">Get Started</a>
+        </div>
+    </section>
+
+    <section class="card auth-card">
+        <h2>Welcome back</h2>
+        <p class="auth-copy">Log in to view your own expenses, budgets, and charts.</p>
+
+        <form id="loginForm" class="stack-form">
+            <label>
+                Email
+                <input type="email" id="email" placeholder="Enter your email" required>
+            </label>
+            <label>
+                Password
+                <input type="password" id="password" placeholder="Enter your password" required>
+            </label>
+            <button class="primary-btn" type="submit">Login</button>
+        </form>
+
+        <div id="formMessage" class="form-message"></div>
+        <p class="inline-note">New here? <a class="text-link inline-link" href="/register.html">Create an account</a></p>
+    </section>
+</main>
+
+<div id="contactModal" class="contact-modal" aria-hidden="true">
+    <div class="contact-modal-backdrop" data-close-contact></div>
+    <section class="contact-card" role="dialog" aria-modal="true" aria-labelledby="contactTitle">
+        <p class="contact-kicker">Contact Me</p>
+        <h2 id="contactTitle">Let's Connect</h2>
+        <div class="contact-list">
+            <a class="contact-item" href="tel:6300610502">
+                <span class="contact-item-label">Phone</span>
+                <strong>6300610502</strong>
+            </a>
+            <a class="contact-item" href="mailto:mahendranath981@gmail.com">
+                <span class="contact-item-label">Email</span>
+                <strong>mahendranath981@gmail.com</strong>
+            </a>
+            <a class="contact-item" href="https://www.instagram.com/__chintu_0929__/" target="_blank" rel="noopener noreferrer">
+                <span class="contact-item-label">Instagram</span>
+                <strong>__chintu_0929__</strong>
+            </a>
+        </div>
+        <button id="contactCloseButton" class="secondary-btn contact-close-btn" type="button" data-close-contact>Close</button>
+    </section>
+</div>
+
+<script src="/js/common.js"></script>
+<script src="/js/login.js"></script>
+</body>
+</html>
